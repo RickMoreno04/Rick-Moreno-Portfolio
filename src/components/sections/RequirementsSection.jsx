@@ -13,6 +13,9 @@ const documents = [
     { title: 'Information Sheet of Training Partner', description: 'Details of the training partner organization.', status: 'Submitted', fileType: 'PDF' },
     { title: 'CV / Resume', description: 'Updated curriculum vitae and professional resume.', status: 'Submitted', fileType: 'PDF' },
     { title: 'Consent Form', description: 'Signed consent form for internship participation.', status: 'In Progress', fileType: 'PDF' },
+    { title: 'DTR', description: 'Daily time record for OJT attendance and rendered hours.', status: 'Submitted', fileType: 'DOCX' },
+    { title: 'Evaluation Form from Student', description: 'Student evaluation form for internship experience and learning outcomes.', status: 'Submitted', fileType: 'DOCX' },
+    { title: 'Evaluation Form from Supervisor', description: 'Supervisor evaluation form for OJT performance and workplace assessment.', status: 'Submitted', fileType: 'DOCX' },
 ]
 
 const fileTypeColors = {
@@ -51,20 +54,32 @@ function RequirementsSection() {
                         </div>
                         <div className="flex-1">
                             <div className="flex items-center gap-2 mb-1">
-                                <p className="font-mono text-[10px] uppercase tracking-wider text-neon-purple">YouTube</p>
-                                <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${statusConfig.Placeholder.color}`}>
-                                    {statusConfig.Placeholder.icon}
-                                    Placeholder
+                                <p className="font-mono text-[10px] uppercase tracking-wider text-neon-purple">Google Drive</p>
+                                <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${statusConfig.Submitted.color}`}>
+                                    {statusConfig.Submitted.icon}
+                                    Submitted
                                 </span>
                             </div>
                             <h3 className="text-lg font-semibold text-white">Video Resume</h3>
                             <p className="mt-1 text-sm text-slate-400">Personal video resume showcasing skills, experience, and career goals.</p>
                             <div className="mt-3 rounded-lg border border-slate-700/50 bg-[#0d0d14] px-3 py-2 font-mono text-xs">
                                 <div className="flex items-center gap-2">
-                                    <span className="text-amber-400">⏳ Pending Upload</span>
+                                    <span className="text-neon-green">Linked from Google Drive</span>
                                     <span className="inline-block h-3.5 w-0.5 bg-neon-green animate-pulse" />
                                 </div>
                             </div>
+                            <a
+                                href="https://drive.google.com/file/d/1KE7kNEzNUtD22o_X-r_koFriC4PVN95v/view?usp=sharing"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="mt-4 inline-block"
+                            >
+                                <Button size="sm" variant="outline">
+                                    <Play size={14} />
+                                    Open Video
+                                    <ExternalLink size={10} />
+                                </Button>
+                            </a>
                         </div>
                     </div>
                 </Card>
@@ -142,7 +157,7 @@ function RequirementsSection() {
                     </Card>
                 </motion.div>
 
-                {/* Accomplishment Report Video */}
+                {/* Final Internship Presentation */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -155,10 +170,10 @@ function RequirementsSection() {
                                 <Video size={22} className="text-neon-cyan" />
                             </div>
                             <div className="flex-1">
-                                <p className="font-mono text-[10px] uppercase tracking-wider text-neon-cyan mb-1">YouTube</p>
-                                <h3 className="text-lg font-semibold text-white">Accomplishment Report Video</h3>
-                                <p className="mt-1 text-sm text-slate-400">Video presentation of OJT accomplishments and project highlights.</p>
-                                <a href="#" target="_blank" rel="noreferrer" className="mt-4 inline-block">
+                                <p className="font-mono text-[10px] uppercase tracking-wider text-neon-cyan mb-1">Google Drive</p>
+                                <h3 className="text-lg font-semibold text-white">Final Internship Presentation</h3>
+                                <p className="mt-1 text-sm text-slate-400">Final internship presentation video submission.</p>
+                                <a href="https://drive.google.com/file/d/1jkv-61cH4i7IrL6Nyeur3onT3LFt_XRb/view?usp=sharing" target="_blank" rel="noreferrer" className="mt-4 inline-block">
                                     <Button size="sm" variant="outline">
                                         <Play size={14} />
                                         Watch Video

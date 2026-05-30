@@ -83,6 +83,33 @@ const studentForms = [
     },
 ]
 
+const newDocuments = [
+    {
+        title: 'DTR',
+        description: 'Daily time record for OJT attendance and rendered hours.',
+        link: 'https://drive.google.com/file/d/1UQPjHtPD99hwv_ewqf3kMSNa5OsdCMHK/view?usp=sharing',
+        previewUrl: 'https://drive.google.com/file/d/1UQPjHtPD99hwv_ewqf3kMSNa5OsdCMHK/preview',
+        fileType: 'DOCX',
+        status: 'Submitted',
+    },
+    {
+        title: 'Evaluation Form from Student',
+        description: 'Student evaluation form for internship experience and learning outcomes.',
+        link: 'https://docs.google.com/document/d/1mJSu6szpNJNWX9kHKtSVgcYReqS3ogaR/edit?usp=sharing&ouid=110588477650662260128&rtpof=true&sd=true',
+        previewUrl: 'https://docs.google.com/document/d/1mJSu6szpNJNWX9kHKtSVgcYReqS3ogaR/preview',
+        fileType: 'DOCX',
+        status: 'Submitted',
+    },
+    {
+        title: 'Evaluation Form from Supervisor',
+        description: 'Supervisor evaluation form for OJT performance and workplace assessment.',
+        link: 'https://docs.google.com/document/d/1d_elJJ2_cZquuDk19iRS4w0HDA_E6CMR/edit?usp=sharing&ouid=110588477650662260128&rtpof=true&sd=true',
+        previewUrl: 'https://docs.google.com/document/d/1d_elJJ2_cZquuDk19iRS4w0HDA_E6CMR/preview',
+        fileType: 'DOCX',
+        status: 'Submitted',
+    },
+]
+
 /* ─── STYLE MAPS ───────────────────────────────────────── */
 
 const fileTypeColors = {
@@ -117,9 +144,19 @@ const statusConfig = {
 
 /* ─── STATS ────────────────────────────────────────────── */
 
-const allItems = [...officialDocuments, ...studentForms]
+const allItems = [...officialDocuments, ...studentForms, ...newDocuments]
 const submittedCount = allItems.filter((d) => d.status === 'Submitted').length
 const inProgressCount = allItems.filter((d) => d.status === 'In Progress').length
+const videoResume = {
+    title: 'Video Resume',
+    link: 'https://drive.google.com/file/d/1KE7kNEzNUtD22o_X-r_koFriC4PVN95v/view?usp=sharing',
+    previewUrl: 'https://drive.google.com/file/d/1KE7kNEzNUtD22o_X-r_koFriC4PVN95v/preview',
+}
+const finalPresentation = {
+    title: 'Final Internship Presentation',
+    link: 'https://drive.google.com/file/d/1jkv-61cH4i7IrL6Nyeur3onT3LFt_XRb/view?usp=sharing',
+    previewUrl: 'https://drive.google.com/file/d/1jkv-61cH4i7IrL6Nyeur3onT3LFt_XRb/preview',
+}
 
 /* ─── DOCUMENT CARD ────────────────────────────────────── */
 
@@ -274,22 +311,22 @@ function RequirementsPage() {
                             </div>
                             <div className="flex items-center gap-3 flex-wrap">
                                 <span className="text-slate-500">
-                                    total: <span className="text-slate-300">{allItems.length + 3}</span>
+                                    total: <span className="text-slate-300">{allItems.length + 4}</span>
                                 </span>
                                 <span className="text-neon-green">
-                                    submitted: {submittedCount}
+                                    submitted: {submittedCount + 3}
                                 </span>
                                 <span className="text-amber-400">
                                     in-progress: {inProgressCount}
                                 </span>
                                 <span className="text-slate-400">
-                                    placeholder: 1
+                                    placeholder: 0
                                 </span>
                             </div>
                             <div className="flex items-center gap-2">
                                 <span className="text-neon-green">$</span>
                                 <span className="text-slate-400">status:</span>
-                                <span className="text-neon-green">all documents submitted with placeholder</span>
+                                <span className="text-neon-green">documents and videos linked</span>
                                 <span className="ml-auto h-2 w-2 rounded-full bg-neon-green animate-pulse" />
                             </div>
                         </div>
@@ -314,7 +351,7 @@ function RequirementsPage() {
                             <div className="flex-1 w-full">
                                 <div className="flex items-center gap-2 mb-1 flex-wrap">
                                     <p className="font-mono text-[10px] uppercase tracking-wider text-neon-purple">
-                                        YouTube
+                                        Google Drive
                                     </p>
                                     <span
                                         className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${fileTypeColors.Video}`}
@@ -322,10 +359,10 @@ function RequirementsPage() {
                                         Video
                                     </span>
                                     <span
-                                        className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${statusConfig.Placeholder.color}`}
+                                        className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${statusConfig.Submitted.color}`}
                                     >
-                                        {statusConfig.Placeholder.icon}
-                                        Placeholder
+                                        {statusConfig.Submitted.icon}
+                                        Submitted
                                     </span>
                                 </div>
                                 <h3 className="text-xl font-semibold text-white">Video Resume</h3>
@@ -340,10 +377,29 @@ function RequirementsPage() {
                                         <span className="text-slate-400">video-resume --status</span>
                                     </div>
                                     <div className="mt-1.5 flex items-center gap-2">
-                                        <span className="text-amber-400">⏳ Pending Upload</span>
+                                        <span className="text-neon-green">Linked from Google Drive</span>
                                         <span className="inline-block h-4 w-0.5 bg-neon-green animate-pulse" />
                                     </div>
                                 </div>
+                                <div className="mt-4 relative w-full overflow-hidden rounded-lg border border-slate-700/50 bg-[#0d0d14]">
+                                    <div className="aspect-video w-full">
+                                        <iframe
+                                            src={videoResume.previewUrl}
+                                            className="h-full w-full border-0"
+                                            allow="autoplay"
+                                            allowFullScreen
+                                            title="Video Resume"
+                                        />
+                                    </div>
+                                </div>
+
+                                <a href={videoResume.link} target="_blank" rel="noreferrer" className="mt-4 inline-block">
+                                    <Button size="sm" variant="outline">
+                                        <Play size={14} />
+                                        Open in Google Drive
+                                        <ExternalLink size={10} />
+                                    </Button>
+                                </a>
                             </div>
                         </div>
                     </Card>
@@ -368,7 +424,7 @@ function RequirementsPage() {
                         </div>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                        {officialDocuments.map((doc, idx) => (
+                        {[...officialDocuments, ...newDocuments].map((doc, idx) => (
                             <DocumentCard key={doc.title} doc={doc} idx={idx} onPreview={openPreview} />
                         ))}
                     </div>
@@ -476,6 +532,60 @@ function RequirementsPage() {
                             </p>
                         </div>
                     </div>
+                    <Card className="group mb-6 hover:border-neon-purple/30 hover:shadow-[0_0_25px_rgba(168,85,247,0.1)] transition-all duration-300">
+                        <div className="flex flex-col gap-4">
+                            <div className="flex items-start gap-4">
+                                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-neon-purple/30 bg-neon-purple/10">
+                                    <Video size={22} className="text-neon-purple" />
+                                </div>
+                                <div className="flex-1">
+                                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                                        <p className="font-mono text-[10px] uppercase tracking-wider text-neon-purple">
+                                            Google Drive
+                                        </p>
+                                        <span className={`rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${fileTypeColors.Video}`}>
+                                            Video
+                                        </span>
+                                        <span className={`inline-flex items-center gap-1 rounded-full border px-2 py-0.5 font-mono text-[9px] uppercase ${statusConfig.Submitted.color}`}>
+                                            {statusConfig.Submitted.icon}
+                                            Submitted
+                                        </span>
+                                    </div>
+                                    <h3 className="text-lg font-semibold text-white">
+                                        Final Internship Presentation
+                                    </h3>
+                                    <p className="mt-1 text-sm text-slate-400">
+                                        Final internship presentation video submission.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div className="relative w-full overflow-hidden rounded-lg border border-slate-700/50 bg-[#0d0d14]">
+                                <div className="aspect-video w-full">
+                                    <iframe
+                                        src={finalPresentation.previewUrl}
+                                        className="h-full w-full border-0"
+                                        allow="autoplay"
+                                        allowFullScreen
+                                        title="Final Internship Presentation"
+                                    />
+                                </div>
+                            </div>
+
+                            <a
+                                href={finalPresentation.link}
+                                target="_blank"
+                                rel="noreferrer"
+                                className="inline-block"
+                            >
+                                <Button size="sm" variant="outline">
+                                    <Play size={14} />
+                                    Open in Google Drive
+                                    <ExternalLink size={10} />
+                                </Button>
+                            </a>
+                        </div>
+                    </Card>
                     <Card className="group hover:border-neon-cyan/30 hover:shadow-[0_0_25px_rgba(34,211,238,0.1)] transition-all duration-300">
                         <div className="flex flex-col gap-4">
                             <div className="flex items-start gap-4">
