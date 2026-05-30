@@ -12,7 +12,7 @@ const documents = [
     { title: 'Student Information Sheet', description: 'Enrollment and student information records.', status: 'Submitted', fileType: 'DOCX' },
     { title: 'Information Sheet of Training Partner', description: 'Details of the training partner organization.', status: 'Submitted', fileType: 'PDF' },
     { title: 'CV / Resume', description: 'Updated curriculum vitae and professional resume.', status: 'Submitted', fileType: 'PDF' },
-    { title: 'Consent Form', description: 'Signed consent form for internship participation.', status: 'In Progress', fileType: 'PDF' },
+    { title: 'Consent Form', description: 'Signed consent form for internship participation.', status: 'Submitted', fileType: 'PDF' },
     { title: 'DTR', description: 'Daily time record for OJT attendance and rendered hours.', status: 'Submitted', fileType: 'DOCX' },
     { title: 'Evaluation Form from Student', description: 'Student evaluation form for internship experience and learning outcomes.', status: 'Submitted', fileType: 'DOCX' },
     { title: 'Evaluation Form from Supervisor', description: 'Supervisor evaluation form for OJT performance and workplace assessment.', status: 'Submitted', fileType: 'DOCX' },

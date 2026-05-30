@@ -76,10 +76,10 @@ const studentForms = [
     {
         title: 'Consent Form',
         description: 'Signed consent form for internship participation.',
-        link: '#',
-        previewUrl: null,
+        link: 'https://drive.google.com/file/d/1YJotolqArNueb-M9lRqX6-NekF0jhPUV/view?usp=sharing',
+        previewUrl: 'https://drive.google.com/file/d/1YJotolqArNueb-M9lRqX6-NekF0jhPUV/preview',
         fileType: 'PDF',
-        status: 'In Progress',
+        status: 'Submitted',
     },
 ]
 
