@@ -10,7 +10,7 @@ const navItems = [
     { label: 'Projects', to: '#projects' },
     { label: 'Dashboard', to: '#dashboard' },
     { label: 'Experience', to: '#experience' },
-    { label: 'Requirements', to: '/requirements', isPage: true },
+    { label: 'OJT/Requirements', to: '/requirements', isPage: true },
     { label: 'Contact', to: '#contact' },
 ]
 
