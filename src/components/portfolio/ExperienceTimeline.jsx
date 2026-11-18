@@ -23,7 +23,7 @@ function ExperienceTimeline() {
             <div className="experience-detail">
               <div className="experience-company"><BriefcaseBusiness size={15} /> {item.company}</div>
               <h3>{item.role}</h3>
-              <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+              {item.details.length > 0 && <ul>{item.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>}
             </div>
           </Reveal>
         ))}

@@ -115,8 +115,14 @@ export const projects = [
 
 export const experience = [
   {
-    period: '2025 – Present',
-    role: 'DevOps Intern → Employee',
+    period: 'February 2026 – May 2026',
+    role: 'DevOps Intern',
+    company: 'S.P. Madrid & Associates',
+    details: [],
+  },
+  {
+    period: 'May 2026 – Present',
+    role: 'DevOps Engineer',
     company: 'S.P. Madrid & Associates',
     details: [
       'Implemented CI/CD pipelines with GitHub Actions for automated deployments.',
