@@ -1,16 +1,37 @@
-# React + Vite
+# Rick Lorin Moreno — DevOps Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive portfolio focused on cloud infrastructure, CI/CD automation, containerization, and observability. Built with React and Vite using a custom black, charcoal, and emerald visual system.
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React 19 and Vite
+- Motion for scroll tracing and connected SVG beams
+- Custom interactive SVG globe and hero architecture diagram
+- Lucide React for interface icons
+- Custom CSS; no UI kit or CSS framework is required
 
-## React Compiler
+## Local development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Quality checks and production build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm run lint
+npm run build
+npm run preview
+```
+
+Vite writes the production site to `dist/`, which is compatible with static Vercel deployment. The portfolio content is centralized in `src/data/portfolio.js`. The terminal is a portfolio-only command simulator and does not execute shell commands or connect to infrastructure.
+
+## Accessibility and performance
+
+- Includes a skip link, keyboard focus styles, semantic sections, and labeled interactive controls.
+- Honors `prefers-reduced-motion`; animated beam and route effects become static.
+- The globe uses SVG and native buttons, so it works without WebGL.
+- Responsive layouts are defined for desktop, tablet, and narrow mobile screens.
+
+Animated Beam is adapted from Magic UI. The scroll-linked Tracing Beam and project Pin treatment adapt Aceternity UI components. React Bits' current MIT + Commons Clause does not permit redistributing Hyperspeed or DecryptedText as bundled site components, so those two are not included. License details and source links are in [`public/THIRD_PARTY_NOTICES.txt`](public/THIRD_PARTY_NOTICES.txt), which is copied to the production output.
