@@ -127,8 +127,15 @@ export const experience = [
   },
 ]
 
+export const certifications = [
+  {
+    title: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services',
+    credlyUrl: 'https://www.credly.com/badges/966bcbf5-4195-42fe-a777-cb0796df29c4/public_url',
+  },
+]
+
 export const learningFocus = [
-  { title: 'AWS Cloud Practitioner', status: 'In progress' },
   { title: 'Docker Certification', status: 'Planned' },
   { title: 'GitHub Actions Advanced', status: 'In progress' },
   { title: 'Linux Administration', status: 'Ongoing' },

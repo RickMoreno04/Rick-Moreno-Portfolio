@@ -299,9 +299,20 @@
 .credentials-heading h2 em { color: #747b76; font-style: normal; }
 .credentials-heading .section-intro { margin-bottom: 5px; }
 .credentials-panel { border: 1px solid var(--border); background: linear-gradient(110deg, rgba(18,20,18,.8), rgba(9,10,9,.55)); }
+.earned-credentials { margin-bottom: 14px; border: 1px solid var(--border); background: linear-gradient(110deg, rgba(18,20,18,.8), rgba(9,10,9,.55)); }
 .credentials-panel-head { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px 18px; border-bottom: 1px solid var(--border); color: #747d76; font: 7px var(--mono); letter-spacing: .1em; }
 .credentials-panel-head span:first-child { display: inline-flex; align-items: center; gap: 9px; color: #b3bcb5; }
 .credentials-panel-head svg { color: var(--green-dim); }
+.earned-credential { display: flex; min-height: 122px; align-items: center; gap: 18px; padding: 21px 20px; }
+.earned-credential-icon { display: grid; width: 52px; height: 52px; flex: 0 0 auto; place-items: center; border: 1px solid #3d5747; background: rgba(0,255,157,.04); color: var(--green); }
+.earned-credential-copy { min-width: 0; }
+.earned-credential-copy > p { margin: 0 0 7px; color: #7f8c82; font: 8px var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.earned-credential-copy h3 { margin: 0; color: #e8ede9; font: 500 clamp(17px, 2vw, 23px)/1.2 var(--display); letter-spacing: -.035em; }
+.earned-credential-label { display: inline-flex; align-items: center; gap: 7px; margin-top: 11px; color: var(--green-dim); font: 7px var(--mono); letter-spacing: .1em; }
+.earned-credential-label i { width: 5px; height: 5px; border-radius: 50%; background: var(--green); box-shadow: 0 0 9px rgba(0,255,157,.4); }
+.credly-link { display: inline-flex; min-height: 40px; align-items: center; gap: 8px; margin-left: auto; padding: 0 12px; border: 1px solid #36443a; color: #d4ddd6; font-size: 10px; white-space: nowrap; transition: border-color .2s ease, color .2s ease; }
+.credly-link svg { color: var(--green); }
+.credly-link:hover { border-color: var(--green); color: #fff; }
 .credentials-list { display: grid; grid-template-columns: repeat(2, 1fr); padding: 0 18px; }
 .credential-row { display: flex; min-height: 63px; align-items: center; gap: 12px; border-bottom: 1px solid #2b302c; }
 .credential-row:nth-child(odd) { margin-right: 22px; }
@@ -505,6 +516,10 @@
   .credential-row:nth-child(odd) { margin-right: 0; }
   .credential-row:nth-child(even) { padding-left: 0; border-left: 0; }
   .credentials-panel-head { align-items: flex-start; flex-direction: column; gap: 8px; padding-inline: 12px; }
+  .earned-credential { min-height: 0; flex-wrap: wrap; gap: 13px; padding: 16px 12px; }
+  .earned-credential-icon { width: 42px; height: 42px; }
+  .earned-credential-copy { flex: 1 1 calc(100% - 60px); }
+  .credly-link { margin-left: 55px; }
   .credentials-note { padding-inline: 12px; }
   .terminal-heading { gap: 18px; }
   .terminal-titlebar { padding-inline: 10px; }
